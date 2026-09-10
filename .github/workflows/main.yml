@@ -1,0 +1,16 @@
+﻿name: Test Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  manual-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Test Step
+        run: |
+          echo "Workflow triggered successfully via API!"
+          echo "Processing task..."
